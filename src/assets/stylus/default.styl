@@ -1,0 +1,146 @@
+html,
+body {
+  background-color $bgbody
+  width 100%
+  height 100%
+}
+/* width height */
+.h100 { height: 100%; }
+.wh100 {
+  width 100%
+  height 100%
+}
+$widthLen = 10 15 20 25 30 40 50 60 70 80 90 100
+for i in $widthLen
+    .w{i}
+      width 1% * i
+/* font-size */
+$fontLen = 0 10 12 14 15 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 52 54 56 58 60 62 64 66 68 70
+for i in $fontLen
+    .f{i}
+      font-size 1px * i
+/* color */
+.cfff { color: $cfff; }
+.c000 { color: $c000; }
+.c333 { color: $c333; }
+.c666 { color: $c666; }
+.c999 { color: $c999; }
+.cccc { color: $cccc; }
+.active { color: $active; }
+.error { color: $error; }
+/* background-color */
+.bgfff { background-color: $cfff; }
+.bg333 { background-color: $c333; }
+.red { color:red; }
+.gray{ color:#b4b4b4;}
+/* padding/margin-top/bottom/left/right */
+$pmLen = 0 6 10 16 20 24 26 30 40 50 60 70 80 90 100
+for i in $pmLen
+    .padding{i}
+      padding 1px * i
+    .paddingt{i}
+      padding-top 1px * i
+    .paddingb{i}
+      padding-bottom 1px * i
+    .paddingl{i}
+      padding-left 1px * i
+    .paddingr{i}
+      padding-right 1px * i
+for i in $pmLen
+    .margint{i}
+      margin-top 1px * i
+    .marginb{i}
+      margin-bottom 1px * i
+    .marginl{i}
+      margin-left 1px * i
+    .marginr{i}
+      margin-right 1px * i
+/* flex */
+.flex {
+  display flex
+}
+// 上下左右居中
+.flex-center {
+  @extend .flex
+  justify-content center
+  align-items center
+}
+// 靠最左靠最右（左右分配） + 上下居中
+.flex-between {
+  @extend .flex
+  justify-content space-between
+  align-items center
+}
+// 平均分配 + 上下居中
+.flex-around {
+  @extend .flex
+  justify-content space-around
+  align-items center
+}
+// 上下居中
+.flex-items {
+  @extend .flex
+  align-items center
+}
+// 换行
+.column {
+  flex-direction column
+}
+.flex-start {
+  align-items flex-start
+}
+.flex-end {
+  justify-content flex-end
+}
+/* other */
+.eg {text-transform: uppercase; }
+.bold {font-weight: bold;}
+.pointer { cursor: pointer; }
+.underline { text-decoration: underline; }
+.border { border: 1px solid $ceee; }
+.radius50 { border-radius: 50%; }
+.radius4 { border-radius: 4px; } // element-ui 的 border-radius:4px
+.none { display: none !important;}
+.block { display:  block;}
+.dib { display: inline-block;}
+.textl { text-align: left; }
+.textc { text-align: center; }
+.textr { text-align: right;}
+.fb{ font-weight:bold; }
+.clearfix:after { content:"."; display:block; height:0; clear:both; visibility:hidden; }
+.relative { position: relative; }
+
+// 禁止用户点击
+.events {
+  pointer-events none
+  cursor not-allowed!important
+}
+/* text-overflow */
+.overflow {
+  display -webkit-box
+  overflow hidden
+  white-space normal
+  text-overflow ellipsis
+  word-wrap break-word
+  -webkit-box-orient vertical
+}
+.text-overflow {
+  white-space nowrap
+  text-overflow ellipsis
+  overflow hidden
+  @extend .block
+}
+.text-overflow2 {
+  @extend .overflow
+  -webkit-line-clamp 2
+}
+.text-overflow3 {
+  @extend .overflow
+  -webkit-line-clamp 3
+}
+.fl{
+  float left
+}
+.fr{
+  float right 
+}

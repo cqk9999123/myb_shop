@@ -1,0 +1,55 @@
+@import '../../../static/css/reset.css'
+@import '../iconfont/iconfont.css'
+@import "~stylus/var"
+@import "~stylus/default"
+@import "~stylus/sidebar"
+@import "~stylus/element-ui"
+@import "~stylus/search"
+
+/* vue default animation transition */
+.fade-enter-active, .fade-leave-active {
+  transition opacity 0.3s
+  opacity 1
+}
+.fade-enter, .fade-leave-to{
+  opacity 0
+}
+
+.el-form-item__content .el-table__header th{padding:0px;}
+
+.slide-enter-active {
+  transition all .1s ease
+}
+.slide-leave-active {
+  transition all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0)
+}
+.slide-enter, .slide-leave-to{
+  transform translateY(100px)
+  opacity 0
+}
+
+/* router-link */
+a, .a{
+  transition color $ms
+  &:hover{
+    color $active
+  }
+}
+
+.table_img{
+  height 20px
+  margin-left: 15px  
+}
+
+.table_input{
+  border: 1px solid #EBEEF5;
+  width:60px;
+  font-size: 16px;
+  line-height: 32px;
+  padding-left: 10px;
+  box-sizing: border-box;  
+}
+
+.el-tabs__item {
+  font-size: 16px;
+}

@@ -1,0 +1,106 @@
+// tab 切换
+.tabs {
+    padding 0 32px
+    .el-tabs__header {
+        background-color $cfff
+        padding-left 16px
+        margin 0
+    }
+    .el-tabs__nav-wrap::after {
+        background-color $cfff
+        height 0
+    }
+    .el-tabs__item {
+        height 45px
+        line-height 45px
+        margin-right 32px
+    }
+    .el-tabs__content {
+        margin 16px
+        background-color $cfff
+    }
+    .el-tabs__content,
+    .padding24 {
+        padding 24px
+    }
+}
+// table 列表
+.el-table {
+    .el-table__header {
+        tr,
+        th {
+            background-color $tableThead
+        }
+        .cell {
+            color $c000
+            font-size 15px
+        }
+    }
+    .el-table__body {
+        a,
+        .a {
+            color $active
+            cursor pointer
+        }
+    }
+    .el-table__body tr.hover-row.current-row>td,
+    .el-table__body tr.hover-row.el-table__row--striped.current-row>td,
+    .el-table__body tr.hover-row.el-table__row--striped>td,
+    .el-table__body tr.hover-row>td,
+    .el-table__body tr.el-table__row:hover>td:last-child,
+    .el-table__body tr:hover>td {
+        background-color $tableHover !important
+    }
+    .el-table__expanded-cell[class*=cell] {
+        padding-top 0
+        padding-bottom 0
+        padding-right 0
+        background-color $tableThead
+        &:hover {
+            background-color $tableThead !important
+        }
+        tr,
+        th {
+            background-color $tableThead
+        }
+        .cell {
+            font-size 14px
+        }
+        .el-table::before {
+            height 0
+        }
+        tr:last-child td{
+            border-bottom none
+        }
+    }
+}
+
+// upload 上传
+$uploadW = 150px
+.avatar-uploader .el-upload {
+    border: 1px dashed $cccc;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.avatar-uploader .el-upload:hover {
+    border-color: $active;
+}
+.avatar-uploader-icon {
+    font-size: 28px;
+    color: $cccc;
+    width: $uploadW;
+    height: $uploadW;
+    line-height: $uploadW;
+    text-align: center;
+}
+.avatar {
+    width: $uploadW;
+    height: $uploadW;
+    display: block;
+}
+
+.el-alert__content{
+    line-height: 0 !important;
+}

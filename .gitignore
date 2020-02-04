@@ -1,0 +1,32 @@
+.DS_Store
+/dist
+/a
+utils
+/node_modules
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# managed by sku
+.eslintrc
+.prettierrc
+coverage/
+dist-playroom/
+dist-storybook/
+dist/
+report/
+# end managed by sku
